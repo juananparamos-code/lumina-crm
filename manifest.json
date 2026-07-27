@@ -1,12 +1,12 @@
 {
-  "name": "Axarenergy CRM",
-  "short_name": "Axarenergy",
-  "description": "CRM Comercial Axarenergy",
+  "name": "Lumina CRM",
+  "short_name": "Lumina",
+  "description": "CRM Comercial · Lumina Asesoría Energética",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#1a9bdc",
+  "theme_color": "#f59e0b",
   "orientation": "any",
   "lang": "es",
   "icons": [

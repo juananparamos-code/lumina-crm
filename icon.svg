@@ -1,6 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="80" fill="#0b1929"/>
-  <text x="256" y="360" font-family="Arial Black,sans-serif" font-size="290" font-weight="900"
-    text-anchor="middle" fill="#1a9bdc">A</text>
-  <rect x="60" y="420" width="392" height="12" rx="6" fill="#16a34a"/>
+  <rect width="512" height="512" rx="80" fill="#1e293b"/>
+  <circle cx="256" cy="200" r="110" fill="#f59e0b" opacity=".9"/>
+  <circle cx="256" cy="200" r="70" fill="#fbbf24"/>
+  <circle cx="256" cy="200" r="30" fill="#fff"/>
+  <text x="256" y="390" font-family="Arial Black,sans-serif" font-size="85" font-weight="900"
+    text-anchor="middle" fill="#f59e0b">LUMINA</text>
 </svg>
