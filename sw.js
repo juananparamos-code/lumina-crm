@@ -1,9 +1,11 @@
-const CACHE = 'lumina-v1';
-const CORE = ['./index.html','./manifest.json','./icon.svg'];
+const CACHE = 'lumina-v2';
+const CORE = ['./index.html','./manifest.json','./icon.svg','./icon-192.png','./icon-512.png'];
+
 self.addEventListener('install', e => {
   self.skipWaiting();
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE).catch(() => {})));
 });
+
 self.addEventListener('activate', e => {
   e.waitUntil(Promise.all([
     clients.claim(),
@@ -12,17 +14,19 @@ self.addEventListener('activate', e => {
     ))
   ]));
 });
+
 self.addEventListener('fetch', e => {
+  // Never cache Supabase API calls
   if(e.request.url.includes('supabase.co')) return;
   e.respondWith(
     caches.match(e.request).then(cached => {
-      const network = fetch(e.request).then(resp => {
+      const net = fetch(e.request).then(resp => {
         if(resp && resp.status === 200 && resp.type === 'basic') {
           caches.open(CACHE).then(c => c.put(e.request, resp.clone()));
         }
         return resp;
       }).catch(() => cached || caches.match('./index.html'));
-      return cached || network;
+      return cached || net;
     })
   );
 });
