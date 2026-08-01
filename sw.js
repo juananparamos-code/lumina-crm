@@ -1,4 +1,4 @@
-const CACHE='lumina-v4';
+const CACHE='lumina-v5';
 const CORE=['./index.html','./manifest.json','./icon-192.png'];
 self.addEventListener('install',e=>{
   self.skipWaiting();
